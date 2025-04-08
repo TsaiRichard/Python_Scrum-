@@ -10,7 +10,7 @@ jiraOptions = {'server': "https://pelotoncycle.atlassian.net"}
 # Authentication parameters 
 # and the Server name. 
 # emailID = your emailID 
-# token = token you receive after registration 
+# token = token you receive after registration ( token will need to be recreated after pushing to github )
 jira = JIRA(options=jiraOptions, basic_auth=( 
     "richard.tsai@onepeloton.com", "ATATT3xFfGF0b2nE6a8hUyNh6XG3PIh-d9mgEhC9XyHAa7HP05NUF-mKD-XwFj7M_Dq9n7Rpgvp5LFTBLOsA-wNSqeLmReS5PIr330fbnWgH3jIS0uuzFKTBVrHHdIK8zgBbkCS9V0wVtgZjLbQQib_l8RLW2j8q50Lpx05_N8AWsXPpEg2rMWg=29CC3AD2"))
 
