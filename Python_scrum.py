@@ -14,7 +14,6 @@ jiraOptions = {'server': "https://pelotoncycle.atlassian.net"}
 jira = JIRA(options=jiraOptions, basic_auth=( 
     "richard.tsai@onepeloton.com", "ATATT3xFfGF0b2nE6a8hUyNh6XG3PIh-d9mgEhC9XyHAa7HP05NUF-mKD-XwFj7M_Dq9n7Rpgvp5LFTBLOsA-wNSqeLmReS5PIr330fbnWgH3jIS0uuzFKTBVrHHdIK8zgBbkCS9V0wVtgZjLbQQib_l8RLW2j8q50Lpx05_N8AWsXPpEg2rMWg=29CC3AD2"))
 
-    # Search all issues mentioned against a project name. 
-for singleIssue in jira.search_issues(jql_str='project = HWQAT',startAt = 0, maxResults = 100): 
-    print('{}: {}:{}'.format(singleIssue.key, singleIssue.fields.summary, 
-                             singleIssue.fields.reporter.displayName))  
+# Search all issues mentioned against a project name. 
+for singleIssue in jira.search_issues(jql_str='project = "HWQAT" AND sprint = 14977 AND assignee = 5c90ae9c6e4d1d2c5d2ecbae',startAt = 0, maxResults = 100): 
+    print('{}: {}:{}:{}:'.format(singleIssue.key, singleIssue.fields.summary, singleIssue.fields.reporter.displayName,singleIssue.fields.customfield_10004))    
